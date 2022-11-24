@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+</head>
+<body>
+    <script>
+        // first step
+
+       class Car{
+            name;
+            color;
+            model;
+            price;
+
+            detail(){
+                return this.name+" "+this.color+" color"+ " model "+this.model+ " is "+this.price +" ."
+            }
+       }
+       let car = new Car;
+       car.name = "Mitsubishi";
+       car.color = "Gray";
+       car.model = 2022;
+       car.price = "$3000"
+       console.log(car)
+
+    //    second step
+
+    class Truck{
+
+        detail(){
+            return this.name+" "+this.color+" color"+ " model "+this.model+ " is "+this.price +" ."
+        }
+        constructor(inputName,inputColor,inputModel,inputPrice){
+            this.name = inputName;
+            this.color = inputColor;
+            this.model = inputModel;
+            this.price = inputPrice;
+        }
+    }
+    let bigCar = new Truck("Naysan","yello",2024,"$5000")
+    console.log(bigCar)
+    </script>
+</body>
+</html>
