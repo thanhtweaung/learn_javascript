@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+    <button onclick="run()">Click Me</button>
+
+    <a href="https://google.com" onclick="return confirm(console.log('click me'))">to Google</a>
+    <script>
+       function run(){
+            let num1 = window.prompt("num1")
+        let num2 = window.prompt("num2")
+        let calc = Number(num1)+Number(num2)
+        window.alert(calc)
+        }
+       
+    </script>
+</body>
+</html>

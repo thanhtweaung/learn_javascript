@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date</title>
+    <title>Array</title>
 </head>
 <body>
     <script>
-       let d = new Date();
-       d.setDate(28)
-       d.setMonth(11)
-      
-       console.log(d.toDateString())
+
+        let fruits =["apple","mango","banana","orange","grap"]
+
+        for(fruit in fruits){
+            console.log(fruit+ fruits[fruit])
+        }
+        
+        // console.log(fruits)
+
     </script>
 </body>
 </html>
