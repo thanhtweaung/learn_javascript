@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addin and Detecting</title>
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <section class=" container">
+        <div class="row m-5">
+            <div class="col-6">
+                <ul class=" list-group " id="list"></ul>
+                <input type="text" class=" form-control" id="input">
+            </div>
+        </div>
+    </section>
+    <script>
+        let fruits = ["apple","orange","mango","banana"];
+
+        let input = document.getElementById("input");
+        let list = document.getElementById("list");
+
+        
+
+        fruits.forEach(function(fruit) {
+            createList(fruit)
+        });
+        function createList(x){
+            let li = document.createElement("li");
+            li.innerText = x;
+            li.innerHTML += `<button class='btn btn-danger btn-sm list-del'>Del</button>`
+            li.classList.add("list-group-item","animate__animated","animate__backInDown","m-2","d-flex","justify-content-between")
+            
+            list.append(li)
+        };
+
+        list.addEventListener("click",function(e){
+            if(e.target.classList.contains("list-del")){
+                e.target.parentElement.classList.replace("animate__backInDown","animate__shakeX")
+                setInterval(function(){
+                    e.target.parentElement.remove()
+                },500)
+                // console.log(e.target)
+
+            }
+        })
+       
+        // document.querySelectorAll(".list-del").forEach(function(currentBtn){
+        //     // console.log(currentBtn)
+        //     currentBtn.addEventListener("click",function(e){
+        //         e.target.parentElement.classList.replace("animate__backInDown","animate__shakeX")
+        //         setInterval(function(){
+        //             e.target.parentElement.remove()
+        //         },500)
+
+        //     })
+
+        // })
+        input.addEventListener("keydown",function(e){
+            if(e.keyCode===13){
+                createList(input.value)
+                input.value=null
+            }
+        });
+
+       
+    </script>
+
+</body>
+</html>

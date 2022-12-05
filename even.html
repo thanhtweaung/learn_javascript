@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even</title>
+</head>
+<body>
+    <h1 id="result">0 USD</h1>
+    <hr>
+    <input type="number" id="input" placeholder="Input MMMK">
+    <button>TO USD</button>
+    <script>
+        let usdTommk = 2000;
+        let result = document.getElementById("result")
+        let input  = document.getElementById("input")
+        let btn = document.querySelector("button")
+
+       
+        btn.addEventListener("click",function(){
+            if(input.value==""){
+            alert("input empty")
+        }else{
+            let usd= input.valueAsNumber/usdTommk
+            result.innerText = usd +" USD"
+            input.value=""
+            console.dir(usd)
+        }
+            
+        })
+
+    </script>
+</body>
+</html>
