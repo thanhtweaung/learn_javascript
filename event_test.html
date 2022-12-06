@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Test</title>
+    <style>
+        .text{
+            padding: 10px;
+            width: 300px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p class="text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat similique, aperiam totam odit ut iure nostrum quae ab enim commodi voluptas architecto beatae, repudiandae accusantium.
+    </p>
+
+    <button id="btn">Hide</button>
+
+    <select name="" id="" class="select">
+        <option value="mm">Myanmar</option>
+        <option value="eg">English</option>
+        <option value="ba">Brazi</option>
+    </select>
+
+    <button id="show">Show</button>
+    <script>
+        let text = document.querySelector(".text");
+        let control = document.getElementById("btn");
+        let show = document.getElementsByClassName("show")
+        control.addEventListener("click",function(){
+            text.style.visibility = "hidden";
+            console.log("hello")
+        })
+        show.addEventListener("click",function(){
+            text.style.visibility = "visible";
+            console.log("hello")
+        })
+
+        // no need write like that onmouseover, only mouseover and so on.
+
+        text.addEventListener("mouseover",function(){
+            text.style.backgroundColor="pink";
+            text.style.color = "gray"
+        })
+        text.addEventListener("mouseout",function(){
+            text.style.backgroundColor="white";
+            text.style.color = "black"
+        })
+
+        let select = document.querySelector(".select");
+
+        select.addEventListener("change",function(){
+            text.innerHTML=select.value;
+            console.log(select.value)
+        })
+
+        // document.addEventListener("scroll",function(){
+        //     console.log("u scrool")
+        // })
+        // document.addEventListener("mousemove",function(){
+        //     console.log("u mouse move")
+        // })
+
+        // document.addEventListener("mouseover",function(e){
+        //     console.dir(e)
+        // })
+
+        // document.addEventListener("click",function(e){
+        //     console.log(e)
+        // })
+    </script>
+</body>
+</html>

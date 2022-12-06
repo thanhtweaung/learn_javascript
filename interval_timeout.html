@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="aa" tabindex="-1" aria-labelledby="aaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="aaLabel">Subscribe Now</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+                <label for="email" class=" form-label">E-mail</label>
+                <input type="email" class=" form-control" id="email">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="subBtn">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class=" container">
+    <div class="row">
+        <div class="col-6">
+            <form action="" class=" d-flex">
+                <div class=" w-50 m-2">
+                    <label for="no1" class=" form-label">Number1</label>
+                    <input type="number" class=" form-control" id="no1">
+                </div>
+                <div class=" w-50 m-2">
+                    <label for="no1" class=" form-label">Number1</label>
+                    <input type="number" class=" form-control" id="no2">
+                </div>
+              </form>
+              <button class=" btn btn-primary w-100" id="btn">
+                <div class=" spinner-border spinner-border-sm text-light d-none" id="loader" role="status">
+                  </div>Calc
+                </button>
+        </div>
+    </div>
+  </section>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+
+        let no1 = document.getElementById("no1");
+        let no2 = document.getElementById("no2");
+        let btn = document.getElementById("btn");
+        let loader = document.getElementById("loader");
+
+        btn.addEventListener("click",function(){
+            loader.classList.remove("d-none")
+            setTimeout(function(){
+                console.log(no1.valueAsNumber + no2.valueAsNumber)
+                loader.classList.add("d-none")
+
+            },3000)
+        })
+
+        // Modal box testing
+
+        // let aaModal = new bootstrap.Modal("#aa")
+        // let email = document.getElementById("email")
+        // let subBtn = document.getElementById("subBtn")
+
+        // subBtn.addEventListener("click",function(){
+        //     console.log(email.value)
+        //     aaModal.hide()
+        // })
+        // setTimeout(function(){
+        //     aaModal.show()
+        // }, 3000);
+    </script>
+</body>
+</html>

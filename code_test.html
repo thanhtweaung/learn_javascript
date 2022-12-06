@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code tet</title>
+    <style>
+        .text{
+            padding: 15px;
+            border: 1px solid skyblue;
+        }
+    </style>
+</head>
+<body>
+    <ul><li>apple</li><li>mango</li><li>banana</li><li>orange</li></ul>
+    <p class="text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum pariatur atque totam deserunt, aspernatur voluptas distinctio sed fugit, sint dolores hic facere saepe, ipsa velit voluptates perferendis quisquam maiores quia?
+    </p>
+    <button class="control">Control</button>
+    <!-- <button class="hide">Hide</button>
+    <button class="show">Show</button> -->
+    <script>
+        let text = document.querySelector(".text");
+        let control = document.querySelector(".control")
+        // let hide = document.querySelector(".hide");
+        // let show = document.querySelector(".show");
+        
+        // hide.addEventListener("click",function(){
+        //     text.style.visibility = "hidden"
+        //     console.log("i am hidden")
+        // })
+
+        // show.addEventListener("click",function(){
+        //     text.style.visibility = "visible"
+        //     console.log("i am show")
+        // })
+
+        control.addEventListener("click",function(){
+            if(text.style.visibility=="" || text.style.visibility=="visible"){
+                text.style.visibility = "hidden"
+            }else if(text.style.visibility ="hidden"){
+                text.style.visibility="visible"
+            }
+            console.log("hello")
+        })
+    </script>
+</body>
+</html>
