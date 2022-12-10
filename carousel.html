@@ -5,73 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carousel</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <style>
-        img{
-            height: 300px;
-            object-fit: cover;
-            object-position: top;
-        }
+        
     </style>
 </head>
 <body>
-    <section class=" container">
-        <div class="row my-5 align-items-center justify-content-center">
-            <div class="col-6">
-                <div id="photoSlide" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="./img/poe_4.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./img/poe_2.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="./img/poe_3.jpg" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-6">
-                <div id="textSlide" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <h1>Hello</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetupsa unde et inventore officia, nobis dolores?</p>
-                      </div>
-                      <div class="carousel-item">
-                        <h1>Hello</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipis elit. Ipsa unde et inventore officia, nobis dolores?</p>
-                      </div>
-                      <div class="carousel-item">
-                        <h1>Hello</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa unde et inventore officia, nobis dolores?</p>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3 mt-3">
-                <button class=" btn btn-primary" id="prev"><i class="bi bi-arrow-left"></i></button>
-                <button class=" btn btn-primary" id="next"><i class="bi bi-arrow-right"></i></button>
-            </div>
-        </div>
-      
-    </section>
-    
+  <nav class="navbar navbar-expand-lg bg-light border border-primary m-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="aa" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+         
+      </div>
+    </div>
+  </nav>
+   
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        let photoSlide = new bootstrap.Carousel("#photoSlide")
-        let textSlide = new bootstrap.Carousel("#textSlide")
 
-        document.getElementById("next").addEventListener("click",function(){
-            photoSlide.next()
-            textSlide.next()
-        })
-        document.getElementById("prev").addEventListener("click",function(){
-            photoSlide.prev()
-            textSlide.prev()
-        })
+      let dd = document.getElementById("aa")
+      let dropDown = new bootstrap.Dropdown(dd)
+      console.log(dropDown)
+
+
+      dd.addEventListener("mouseover",function(){
+        dropDown.show()
+      })
+      // dd.addEventListener("mouseout",function(){
+      //   dropDown.hide()
+      // })
+
+
+
+
+
     </script>
 </body>
 </html>

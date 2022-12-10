@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+    <script src="./product.js"></script>
+    <script>
+        let fruits =["apple","mango","banana","orange","grap"]
+        let marks =[50,41,40,56,60,75,]
+
+
+        // let result = marks.reduce(function(pre,cur){
+        //     // console.log(pre,cur)
+        //     return pre+cur
+        // },0)
+
+        // let result = fruits.reduce(function(pre,cur){
+        //     console.log(pre,cur)
+        //     return pre+"--"+cur
+        // })
+
+
+        // ကုန်ဈေးနှုန်းစုစုပေါင်းကိုတွက်ချက်မည်။
+
+        let result=products.reduce(function(prev,curre){
+            // console.log(prev,curre)
+            return prev+curre.price
+        },0)
+
+        console.log(result)
+
+    </script>
+</body>
+</html>

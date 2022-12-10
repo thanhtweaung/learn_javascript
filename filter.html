@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+    <script src="./product.js"></script>
+    <script>
+        // let result = products.filter(function(product){
+        //     return product.price>50
+        // })
+
+        // result=result.map(function(e){
+        //     return{
+        //         name:e.title,
+        //         price: e.price,
+        //         photo:e.image
+        //     }
+        // })
+
+        // အောက်ကနည်းသည် အပေါ်နည်းနှင့် အတူတူပင်ဖြစ်သည်။ "Method Chainging" ဟုခေါ်သည်။
+
+        let result = products.filter(function(product){
+            return product.price>50
+        }).map(function(e){
+            return{
+                name:e.title,
+                price: e.price,
+                photo:e.image
+            }
+        })
+        console.table(result)
+    </script>
+</body>
+</html>

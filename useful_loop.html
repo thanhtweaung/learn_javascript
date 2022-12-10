@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <script>
+        let fruits = ["apple","mango","banana","orange","grap"]
+        let num = [40,50,48,68,79,20,10]
+        let voca = ["a","b","c","d","e"]
+
+        //for each
+
+        // fruits.forEach(function(value,index,arr){
+        //     console.log(value,index,arr)
+        // })
+
+        // num.forEach(function(value,index,arr){
+        //     console.log(value,index,arr)
+        // })
+
+
+        // let result = fruits.forEach(function(x,y,z){
+        //     console.log(x,y,z)
+        // })
+        // console.log(result)
+
+        // map
+        // မူရင်းရှိပြီးသား Array တွေကို အချိန်းအပြောင်းလုပ်တဲ့ အခါမာ "map()" ကိုသုံးပါသည်။
+
+        // fruits.map(function(value,index,arr){
+        //     console.log(value,index,arr)
+        // })
+
+        // num.map(function(value,index,arr){
+        //     console.log(value,index,arr)
+        // })
+
+        // let mpResult = voca.map(function(x,y,z){
+        //     console.log(x,y,z)
+        //     return "value"+x
+        // })
+
+        // let mpResult = fruits.map(function(value,index){
+        //     console.log(value,index)
+        //     return value.length +"-"+ value.toUpperCase()
+        // })
+
+        // let mark = num.map(function(value,index){
+        //     console.log(value,index)
+        //     return value>40 ?"win":"lose"
+        // })
+        // console.log(mark)
+        // console.log(mpResult)
+
+        // filter
+        // true ဖြစ်ရင် အလုပ်လုပ်တယ် false ဆိုရင် အလုပ်မလုပ်ဘူး "return true,return false"လို့စမ်းကြည့်ပါ။
+    //   let fil=  fruits.filter(function(x,y,z){
+    //         console.log(x,y,z)
+    //         return x.length>5
+    //     })
+        // console.log(fil)
+
+        //find
+
+        // let fruit = fruits.find(function(element){
+        //     // console.log(element)
+        //     return element.length>5
+        // })
+        // console.log(fruit)
+
+        // let result = products.map(function(x){
+        //     // console.log(x)
+        //     return{name:x.title,price:x.price}
+        // })
+
+        let fin = products.filter(function(x){
+            // console.log(x)
+            return x.price<100
+        })
+        console.table(fin)
+        // console.log(result)
+     </script>
+</body>
+</html>
